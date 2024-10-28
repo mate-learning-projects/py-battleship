@@ -53,6 +53,7 @@ class Battleship:
                 self.field[(deck.row, deck.column)] = ship
 
     def fire(self, location: Tuple[int, int]) -> str:
+        # Check if the shot hit any ship
         if location in self.field:
             ship = self.field[location]
             hit_result = ship.fire(*location)
